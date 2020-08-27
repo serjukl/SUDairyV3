@@ -1,0 +1,41 @@
+@import "./styles/sassSetUp"
+
+.navigation
+  width: 100%
+  display: flex
+  justify-content: center
+  ul
+    width: 90%
+    height: 60px
+    border-bottom: 1px solid $primary-r
+    display: flex
+    align-items: center
+    justify-content: space-evenly
+    list-style: none
+    li
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      a
+        text-decoration: none
+        color: $primary-r
+        transition: .3s
+        font-family: $fontMain
+        font-size: 20px
+        padding: 0 15px
+        line-height: 60px
+        font-weight: 500
+        display: flex
+        align-items: center
+        svg
+          height: 40px
+          width: 40px
+          path
+            transition: .3s
+        &:hover
+          color: $primary-r-hover
+          svg
+            path
+              fill: $primary-r-hover
+

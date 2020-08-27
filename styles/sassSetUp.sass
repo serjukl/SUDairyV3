@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700&display=swap')
+
+$primary-g: #19D938
+$primary-o: #FF7D05
+$primary-r: #FF0545
+$primary-r-hover: #EF5C6E
+$dark: #302C2D
+$gray: #666666
+$contrast: #fff
+
+$fontMain: 'Baloo Tamma 2', cursive
+
+@mixin flex-row($status)
+  display: flex
+  align-items: center
+  @if $status == c
+    justify-content: center
+  @if $status == sb
+    justify-content: space-between
+  @if $status == se
+    justify-content: space-evenly
+  @if $status == sa
+    justify-content: space-around
+
+@mixin flex-column($status)
+  display: flex
+  flex-direction: column
+  @if $status == c
+    align-items: center
+  @if $status == fe
+    align-items: flex-end
+  @if $status == fs
+    align-items: flex-start
+
+@mixin testBlock
+  border: 1px solid red
+
+@mixin block($height, $width, $radius: 0)
+  width: $width
+  height: $height
+  @if $radius != 0
+    border-radius: $radius
